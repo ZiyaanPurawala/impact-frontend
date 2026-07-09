@@ -169,7 +169,7 @@ export default function WorkoutLogger() {
           reps: parseInt(s.reps) || 0,
           rpe: s.rpe ? parseFloat(s.rpe) : undefined,
           isWarmup: s.isWarmup,
-        })).filter(s => s.weight > 0 && s.reps > 0 || s.isWarmup)
+        })).filter(s => (s.weight > 0 && s.reps > 0) || s.isWarmup)
       }))
     };
 
